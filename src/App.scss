@@ -1,0 +1,205 @@
+$primary-color: #007FDB;
+$secondary-color: #20eeb0;
+$background-color: #eeeeee;
+$light-bg: #ebeff2;
+$white-color: #ffffff;
+$text-color: #0D0D0D;
+$secondary-text-color: #888888;
+$font-family-main: 'Inter', sans-serif;
+$font-family-header: 'Russo One', sans-serif;
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $background-color;
+}
+
+#root {
+  display: flex;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#Text {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Text p {
+  margin: 0;
+  font-family: $font-family-main;
+  font-weight: 700;
+  font-size: 96px;
+  color: $primary-color;
+}
+#container {
+  width: 100%;
+  height: 100vh;
+}
+#Box {
+  width: 430px;
+  height: 640px;
+  display: grid;
+  grid-template-rows: 0.7fr 1.5fr;
+  margin-top: 160px;
+
+  .img {
+    background-image: url(./assets/IMG/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+    .day {
+      color: $white-color;
+      font-weight: 400;
+      font-size: 18px;
+      margin: 0;
+      margin-right: 30px;
+      font-family: $font-family-header;
+    }
+    
+    .time {
+      color: $white-color;
+      font-size: 48px;
+      font-weight: 400;
+      margin: 0;
+      margin-right: 30px;
+      margin-bottom: 15px;
+      font-family: $font-family-header;
+    }
+  }
+}
+.info {
+  background-color: $white-color;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 20px;
+
+  .top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+
+    button {
+      width: 88px;
+      height: 50px;
+      border-radius: 5px;
+      border: 0;
+      margin-left: 20px;
+      background-color: $secondary-color;
+    }
+  }
+
+  .search {
+    width: 275px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: $light-bg;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-left: 10px;
+    }
+
+    input {
+      border: none;
+      background-color: $light-bg;
+      outline: none;
+      margin-left: 10px;
+      font-family: $font-family-main;
+    }
+  }
+
+  .damatebulebi {
+    width: 373px;
+    height: 300px;
+    margin: auto;
+    margin-top: 30px;
+    overflow: overlay;
+
+    p {
+      margin: 0;
+    }
+
+    .added {
+      display: flex;
+      width: 100%;
+      height: 44px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .informatrion {
+        .main {
+          font-family: $font-family-main;
+          font-size: 18px;
+          font-weight: 500;
+          color: $text-color;
+          margin-bottom: 5px;
+        }
+
+        .timee {
+          font-family: $font-family-main;
+          font-size: 14px;
+          font-weight: 400;
+          color: $secondary-text-color;
+        }
+      }
+
+      .rame {
+        display: flex;
+        gap: 10px;
+
+        .ADD {
+          width: 24px;
+          height: 24px;
+        }
+
+        .Remove {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.todo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-family: $font-family-main;
+    font-size: 96px;
+    font-weight: 700;
+    color: $primary-color;
+  }
+}
+@media screen and (max-width:900px) {
+  #root{
+    flex-direction: column;
+    height: 500px;
+  }
+  #container{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  #Box{
+    margin-top: 0px;
+  }
+}
